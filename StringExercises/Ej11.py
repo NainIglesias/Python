@@ -5,13 +5,9 @@ class Product:
 		self.unit = unit
 	def show(self):
 		print(f"Name: {self.name}, Price: {self.price}, Units: {self.unit}")
-def rellenarCeros(string):
-	for x in range(1, len(str(string)) + 1):
-		print(str(x))
 productName = input("Product name: ")
 productPrice = round(float(input("Product price: ")),2)
 productUnits = input("Product units: ")
-myProduct = Product(productName, str(productPrice), productUnits)
+myProduct = Product(productName, str(productPrice).zfill(9), productUnits)
 myProduct.show()
-rellenarCeros(productPrice)
 
